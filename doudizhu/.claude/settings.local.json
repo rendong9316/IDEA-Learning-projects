@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(javac -d out -sourcepath src src/com/doudizhu/main/DoudizhuMain.java)",
+      "Bash(java -cp out com.doudizhu.main.DoudizhuMain)",
+      "Bash(javac -d out -sourcepath src src/com/doudizhu/**/*.java)"
+    ]
+  }
+}
