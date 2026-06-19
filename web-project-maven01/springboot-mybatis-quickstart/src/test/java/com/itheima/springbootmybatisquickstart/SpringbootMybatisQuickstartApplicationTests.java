@@ -31,9 +31,9 @@ class SpringbootMybatisQuickstartApplicationTests {
         @Test
         public void testAddUser(){
             User user = new User();
-            user.setId(1);
-            user.setUsername("小王");
-            user.setGender("男");
+            user.setId(3);
+            user.setUsername("小li");
+            user.setGender("女");
 
             userMapper.addUser(user);
         }
