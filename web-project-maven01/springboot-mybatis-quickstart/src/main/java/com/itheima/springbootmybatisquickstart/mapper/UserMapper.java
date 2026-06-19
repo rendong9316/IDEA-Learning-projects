@@ -14,4 +14,13 @@ public interface UserMapper {
     @Select("select * from user")
     public List<User> findAll();
 
+    //删除id为？的用户
+    @Select("delete from user where id = #{id}")
+    public void deleteById(Integer id);
+
+
+    // 添加用户
+    @Select("insert into user(id, username, gender) values(#{id},#{username},#{gender})")
+    public void addUser(User user);
+
 }
