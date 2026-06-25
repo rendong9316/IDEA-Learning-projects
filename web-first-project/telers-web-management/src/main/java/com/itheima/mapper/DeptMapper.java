@@ -19,4 +19,7 @@ public interface DeptMapper {
 
     @Select("insert into dept(name, create_time, update_time) values(#{name}, #{createTime}, #{updateTime})")
     void add(Dept dept);
+
+    @Select("select id, name, create_time, update_time from dept where id = #{id}")
+    Dept findById(Integer id);
 }
