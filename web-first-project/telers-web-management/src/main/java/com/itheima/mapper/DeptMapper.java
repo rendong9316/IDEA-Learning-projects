@@ -13,4 +13,7 @@ public interface DeptMapper {
 
     @Select("select id, name, create_time, update_time from dept order by update_time desc")
     List<Dept> findAll();
+
+    @Select("delete from dept where id = #{id}")
+    void delete(Integer id);
 }
