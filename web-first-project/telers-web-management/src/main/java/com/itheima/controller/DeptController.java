@@ -4,10 +4,7 @@ import com.itheima.pojo.Dept;
 import com.itheima.pojo.Result;
 import com.itheima.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 //restcontroller注解的作用是返回json数据
@@ -32,4 +29,12 @@ public class DeptController {
         deptService.delete(id);
         return Result.success();
     }
+
+    @PostMapping("/depts")
+    public Result add(@RequestBody Dept dept) {
+        System.out.println("添加部门数据：" + dept);
+        deptService.add(dept);
+        return Result.success();
+    }
+
 }
