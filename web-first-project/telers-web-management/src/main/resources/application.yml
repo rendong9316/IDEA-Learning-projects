@@ -13,6 +13,6 @@ spring:
 mybatis:
   configuration:
     # 开启下划线转驼峰
-    #map-underscore-to-camel-case: true
+    map-underscore-to-camel-case: true
     # 打印SQL日志
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
